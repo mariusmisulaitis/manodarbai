@@ -23,12 +23,14 @@ public class SchoolService {
         return this.schoolRepository.findById(id).orElseThrow();
     }
 
+
     public Student getStudentBySchoolAndId(Long schoolId, Long studentId) {
-        for (Student student : this.schoolRepository.findById(schoolId).orElseThrow().getStudents()) {
+        for (Student student : this.getSchoolByIdOrThrow(schoolId).getStudents()) {
             if (Objects.equals(student.getId(), studentId)) {
                 return student;
             }
         }
         return null;
     }
+
 }

@@ -1,6 +1,6 @@
 package lt.mariusworks.work1.controllers;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lt.mariusworks.work1.entities.School;
 import lt.mariusworks.work1.entities.Student;
 import lt.mariusworks.work1.services.SchoolService;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RequestMapping(value = "/schools")
-@AllArgsConstructor
+@RequiredArgsConstructor
 @RestController
 public class SchoolController {
 
